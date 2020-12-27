@@ -1,1 +1,180 @@
 
+CREATE TABLE Guest
+(
+  SSN INT NOT NULL,
+  Status INT NOT NULL,
+  PRIMARY KEY (SSN)
+);
+
+CREATE TABLE Events
+(
+  Event_ID INT NOT NULL,
+  Name INT NOT NULL,
+  Place INT NOT NULL,
+  Date INT NOT NULL,
+  Fees INT NOT NULL,
+  Likes INT NOT NULL,
+  PRIMARY KEY (Event_ID)
+);
+
+CREATE TABLE Reviews
+(
+  Review_ID INT NOT NULL,
+  Date INT NOT NULL,
+  Rating INT NOT NULL,
+  Comments INT NOT NULL,
+  PRIMARY KEY (Review_ID)
+);
+
+CREATE TABLE Matches
+(
+  Match_ID INT NOT NULL,
+  Time INT NOT NULL,
+  Place INT NOT NULL,
+  PRIMARY KEY (Match_ID)
+);
+
+CREATE TABLE Awards
+(
+  Award_ID INT NOT NULL,
+  Name INT NOT NULL,
+  PRIMARY KEY (Award_ID)
+);
+
+CREATE TABLE Accounts
+(
+  Username INT NOT NULL,
+  Password INT NOT NULL,
+  Type INT NOT NULL,
+  PRIMARY KEY (Username)
+);
+
+CREATE TABLE Activites
+(
+  ID INT NOT NULL,
+  Name VARCHAR(50) NOT NULL,
+  Place VARCHAR(50) NOT NULL,
+  Likes INT NOT NULL,
+  PRIMARY KEY (ID)
+);
+
+CREATE TABLE Members
+(
+  Start_Date INT NOT NULL,
+  Sex INT NOT NULL,
+  Status INT NOT NULL,
+  Age INT NOT NULL,
+  Name INT NOT NULL,
+  ID INT NOT NULL,
+  MemberShip_Price INT NOT NULL,
+  Event_ID INT NOT NULL,
+  Username INT NOT NULL,
+  PRIMARY KEY (ID),
+  FOREIGN KEY (Event_ID) REFERENCES Events(Event_ID),
+  FOREIGN KEY (Username) REFERENCES Accounts(Username)
+);
+
+CREATE TABLE Parking
+(
+  Start_Date INT NOT NULL,
+  Fees INT NOT NULL,
+  Subscribtion_ID INT NOT NULL,
+  End_Date INT NOT NULL,
+  ID INT NOT NULL,
+  PRIMARY KEY (Subscribtion_ID),
+  FOREIGN KEY (ID) REFERENCES Members(ID)
+);
+
+CREATE TABLE Teams
+(
+  Training_Time INT NOT NULL,
+  Team_Size INT NOT NULL,
+  Team_ID INT NOT NULL,
+  Level INT NOT NULL,
+  ID INT NOT NULL,
+  Match_ID INT NOT NULL,
+  Guest_SSN INT NOT NULL,
+  PRIMARY KEY (Team_ID),
+  FOREIGN KEY (ID) REFERENCES Members(ID),
+  FOREIGN KEY (Match_ID) REFERENCES Matches(Match_ID),
+  FOREIGN KEY (Guest_SSN) REFERENCES Guest(SSN)
+);
+
+CREATE TABLE Events_Reviews
+(
+  Event_ID INT NOT NULL,
+  Review_ID INT NOT NULL,
+  ID INT NOT NULL,
+  PRIMARY KEY (Event_ID, Review_ID, ID),
+  FOREIGN KEY (Event_ID) REFERENCES Events(Event_ID),
+  FOREIGN KEY (Review_ID) REFERENCES Reviews(Review_ID),
+  FOREIGN KEY (ID) REFERENCES Members(ID)
+);
+
+CREATE TABLE Activites_Reviews
+(
+  ID INT NOT NULL,
+  Review_ID INT NOT NULL,
+  ID INT NOT NULL,
+  PRIMARY KEY (ID, Review_ID, ID),
+  FOREIGN KEY (ID) REFERENCES Members(ID),
+  FOREIGN KEY (Review_ID) REFERENCES Reviews(Review_ID),
+  FOREIGN KEY (ID) REFERENCES Activites(ID)
+);
+
+CREATE TABLE Awards_Teams
+(
+  Team_ID INT NOT NULL,
+  Award_ID INT NOT NULL,
+  PRIMARY KEY (Team_ID, Award_ID),
+  FOREIGN KEY (Team_ID) REFERENCES Teams(Team_ID),
+  FOREIGN KEY (Award_ID) REFERENCES Awards(Award_ID)
+);
+
+CREATE TABLE Department
+(
+  DBuilding INT NOT NULL,
+  Name INT NOT NULL,
+  Number INT NOT NULL,
+  SSN INT NOT NULL,
+  PRIMARY KEY (Name),
+  FOREIGN KEY (SSN) REFERENCES Employee(SSN),
+  UNIQUE (Number)
+);
+
+CREATE TABLE Employee
+(
+  SSN INT NOT NULL,
+  Fname INT NOT NULL,
+  Minit INT NOT NULL,
+  Lname INT NOT NULL,
+  Salary INT NOT NULL,
+  Sex INT NOT NULL,
+  Name INT NOT NULL,
+  Super_SSN INT NOT NULL,
+  Username INT NOT NULL,
+  PRIMARY KEY (SSN),
+  FOREIGN KEY (Name) REFERENCES Department(Name),
+  FOREIGN KEY (Super_SSN) REFERENCES Employee(SSN),
+  FOREIGN KEY (Username) REFERENCES Accounts(Username)
+);
+
+CREATE TABLE Coaches
+(
+  SSN INT NOT NULL,
+  ID INT NOT NULL,
+  PRIMARY KEY (SSN, ID),
+  FOREIGN KEY (SSN) REFERENCES Employee(SSN),
+  FOREIGN KEY (ID) REFERENCES Activites(ID)
+);
+
+CREATE TABLE Team_Activity
+(
+  Team_ID INT NOT NULL,
+  SSN INT NOT NULL,
+  ID INT NOT NULL,
+  PRIMARY KEY (Team_ID, SSN, ID),
+  FOREIGN KEY (Team_ID) REFERENCES Teams(Team_ID),
+  FOREIGN KEY (SSN) REFERENCES Employee(SSN),
+  FOREIGN KEY (ID) REFERENCES Activites(ID)
+);
