@@ -1,109 +1,97 @@
-Create Database SmartClub_E
+Create Database Smart_Club
 
 go
 
-use SmartClub_E
-
-
-CREATE TABLE Guest
-(
-  SSN INT NOT NULL,
-  Status INT NOT NULL,
-  PRIMARY KEY (SSN)
-);
-
-CREATE TABLE Events
-(
-  Event_ID INT NOT NULL,
-  Name INT NOT NULL,
-  Place INT NOT NULL,
-  Date INT NOT NULL,
-  Fees INT NOT NULL,
-  Likes INT NOT NULL,
-  PRIMARY KEY (Event_ID)
-);
-
-CREATE TABLE Reviews
-(
-  Review_ID INT NOT NULL,
-  Date INT NOT NULL,
-  Rating INT NOT NULL,
-  Comments INT NOT NULL,
-  PRIMARY KEY (Review_ID)
-);
-
-CREATE TABLE Matches
-(
-  Match_ID INT NOT NULL,
-  Time INT NOT NULL,
-  Place INT NOT NULL,
-  PRIMARY KEY (Match_ID)
-);
-
-CREATE TABLE Awards
-(
-  Award_ID INT NOT NULL,
-  Name INT NOT NULL,
-  PRIMARY KEY (Award_ID)
-);
+use Smart_Club
 
 CREATE TABLE Accounts
 (
-  Username INT NOT NULL,
-  Password INT NOT NULL,
-  Type INT NOT NULL,
+  Username VARCHAR(50) NOT NULL,
+  Password VARCHAR(50) NOT NULL,
+  Type VARCHAR(1) NOT NULL,
   PRIMARY KEY (Username)
-);
-
-CREATE TABLE Activites
-(
-  ID INT NOT NULL,
-  Name VARCHAR(50) NOT NULL,
-  Place VARCHAR(50) NOT NULL,
-  Likes INT NOT NULL,
-  PRIMARY KEY (ID)
 );
 
 CREATE TABLE Members
 (
-  Start_Date INT NOT NULL,
-  Sex INT NOT NULL,
-  Status INT NOT NULL,
-  Age INT NOT NULL,
-  Name INT NOT NULL,
-  ID INT NOT NULL,
+  Start_Date DATE NOT NULL,
+  Sex char ,
+  Status VARCHAR(20) NOT NULL,
+  Age INT ,
+  Name VARCHAR(50) NOT NULL,
+  ID INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
   MemberShip_Price INT NOT NULL,
-  Event_ID INT NOT NULL,
-  Username INT NOT NULL,
-  PRIMARY KEY (ID),
-  FOREIGN KEY (Event_ID) REFERENCES Events(Event_ID),
+  Username VARCHAR(50) NOT NULL,
   FOREIGN KEY (Username) REFERENCES Accounts(Username)
+);
+
+CREATE TABLE Events
+(
+  Event_id INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
+  Name VARCHAR (55) NOT NULL,
+  Place VARCHAR (70),
+  Date DATE NOT NULL,
+  Likes INT DEFAULT 0 NOT NULL,
+  Fees INT NOT NULL,
+  Member_ID INT NOT NULL,
+  FOREIGN KEY (Member_ID) REFERENCES Members(ID)
+);
+
+CREATE TABLE Reviews
+(
+  Review_id INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
+  Comment TEXT,
+  Rating INT NOT NULL,
+  Date DATE NOT NULL
+);
+
+CREATE TABLE Awards
+(
+  Award_ID INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
+  Name VARCHAR(50) NOT NULL,
+);
+
+CREATE TABLE Activites
+(
+  ID INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
+  Name VARCHAR (55) NOT NULL,
+  Place VARCHAR (100) NOT NULL,
+  Likes INT DEFAULT 0 NOT NULL,
 );
 
 CREATE TABLE Parking
 (
-  Start_Date INT NOT NULL,
+  Start_Date DATE NOT NULL,
   Fees INT NOT NULL,
-  Subscribtion_ID INT NOT NULL,
-  End_Date INT NOT NULL,
+  Subscribtion_ID INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
+  End_Date DATE NOT NULL,
   Member_ID INT NOT NULL,
-  PRIMARY KEY (Subscribtion_ID),
   FOREIGN KEY (Member_ID) REFERENCES Members(ID)
 );
 
 CREATE TABLE Teams
 (
-  Training_Time INT NOT NULL,
-  Team_Size INT NOT NULL,
-  Team_ID INT NOT NULL,
+  Training_Time DATE NOT NULL,
+  Size INT DEFAULT 0 NOT NULL,
+  ID INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
   Level INT NOT NULL,
-  ID INT NOT NULL,
-  Match_ID INT NOT NULL,
-  Guest_SSN INT NOT NULL,
-  PRIMARY KEY (Team_ID),
-  FOREIGN KEY (ID) REFERENCES Members(ID),
-  FOREIGN KEY (Match_ID) REFERENCES Matches(Match_ID),
-  FOREIGN KEY (Guest_SSN) REFERENCES Guest(SSN)
+);
+
+CREATE TABLE Matches
+(
+  Match_ID INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
+  Time DATE NOT NULL,
+  Place VARCHAR (55) ,
+  Team_ID INT,
+  FOREIGN KEY (Team_ID) REFERENCES Teams(ID),
+);
+
+CREATE TABLE Guest
+(
+  SSN INT PRIMARY KEY NOT NULL,
+  Status VARCHAR (55) NOT NULL,
+  Team_ID INT,
+  FOREIGN KEY (Team_ID) REFERENCES Teams(ID)
 );
 
 CREATE TABLE Events_Reviews
@@ -133,7 +121,7 @@ CREATE TABLE Awards_Teams
   Team_ID INT NOT NULL,
   Award_ID INT NOT NULL,
   PRIMARY KEY (Team_ID, Award_ID),
-  FOREIGN KEY (Team_ID) REFERENCES Teams(Team_ID),
+  FOREIGN KEY (Team_ID) REFERENCES Teams(ID),
   FOREIGN KEY (Award_ID) REFERENCES Awards(Award_ID)
 );
 
@@ -142,14 +130,13 @@ CREATE TABLE Awards_Teams
 CREATE TABLE Employee
 (
   SSN INT ,
-  Fname INT NOT NULL,
-  Minit INT NOT NULL,
-  Lname INT NOT NULL,
+  Fname VARCHAR (55) NOT NULL,
+  Minit VARCHAR (10) ,
+  Lname VARCHAR (55) ,
   Salary INT NOT NULL,
-  Sex INT NOT NULL,
-  Name INT NOT NULL,
+  Sex char NOT NULL,
   Super_SSN INT ,
-  Username INT NOT NULL,
+  Username VARCHAR (50) NOT NULL,
   PRIMARY KEY (SSN),
   DNO int,
   FOREIGN KEY (Super_SSN) REFERENCES Employee(SSN),
@@ -157,13 +144,13 @@ CREATE TABLE Employee
 );
 CREATE TABLE Department
 (
-  DBuilding INT NOT NULL,
-  Name INT NOT NULL,
+  Building VARCHAR (55) NOT NULL,
+  Name VARCHAR (55) NOT NULL,
   Number INT NOT NULL,
   Manager_SSN INT NOT NULL,
-  PRIMARY KEY (Name),
+  PRIMARY KEY (Number),
   FOREIGN KEY (Manager_SSN) REFERENCES Employee,
-  UNIQUE (Number)
+  UNIQUE (Name)
 );
 
 CREATE TABLE Coaches
@@ -181,8 +168,8 @@ CREATE TABLE Team_Activity
   SSN INT NOT NULL,
   Activity_ID INT NOT NULL,
   PRIMARY KEY (Team_ID, SSN, Activity_ID),
-  FOREIGN KEY (Team_ID) REFERENCES Teams(Team_ID),
+  FOREIGN KEY (Team_ID) REFERENCES Teams(ID),
   FOREIGN KEY (SSN) REFERENCES Employee(SSN),
   FOREIGN KEY (Activity_ID) REFERENCES Activites(ID)
 );
-alter table Employee add foreign key (DNO) references Department
+alter table Employee add foreign key (DNO) references Department(Number)
