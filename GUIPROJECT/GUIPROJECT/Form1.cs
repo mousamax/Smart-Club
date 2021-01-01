@@ -63,7 +63,7 @@ namespace GUIPROJECT
             hideSubMenu();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void addevent_Click(object sender, EventArgs e)
         {
             Event x = new Event();
             openChildForm(x);
@@ -71,9 +71,10 @@ namespace GUIPROJECT
             hideSubMenu();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void parkingsubscribe_Click(object sender, EventArgs e)
         {
-            //code showing form or whatever
+            Parking p = new Parking();
+            openChildForm(p);
 
             hideSubMenu();
         }      

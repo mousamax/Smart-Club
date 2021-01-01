@@ -105,7 +105,7 @@ namespace GUIPROJECT
             this.eventdate.Name = "eventdate";
             this.eventdate.Size = new System.Drawing.Size(146, 22);
             this.eventdate.TabIndex = 8;
-            this.eventdate.Text = "dd/mm/yy";
+            this.eventdate.Text = "mm/dd/yy";
             // 
             // eventfees
             // 

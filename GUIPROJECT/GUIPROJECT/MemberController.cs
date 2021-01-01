@@ -26,5 +26,11 @@ namespace GUIPROJECT
             string query = "Insert into Events values('"+name+"','"+place+"','"+date+"',null,"+fees+","+memberid+")";
             return dbMan.ExecuteNonQuery(query);
         }
+
+        public int ParkingSubscribe(string startdate,int fees, string enddate, int memberid)
+        {
+            string query = "Insert into Parking values('" + startdate + "'," + fees + ",'" + enddate + "',"  + memberid + ")";
+            return dbMan.ExecuteNonQuery(query);
+        }
     }
 }
