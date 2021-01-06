@@ -14,14 +14,14 @@ CREATE TABLE Accounts
 
 CREATE TABLE Members
 (
+  ID INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
   Start_Date DATE NOT NULL,
   Sex char ,
-  Status VARCHAR(20) default 'pending',
   Age INT ,
   Name VARCHAR(50) NOT NULL,
-  ID INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
   MemberShip_Price INT ,
   Username VARCHAR(50) ,
+  Status VARCHAR(20) default 'pending',
   FOREIGN KEY (Username) REFERENCES Accounts(Username)
 );
 
@@ -61,21 +61,21 @@ CREATE TABLE Activites
 
 CREATE TABLE Parking
 (
-  Start_Date DATE NOT NULL,
-  Fees INT ,
   Subscribtion_ID INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
-  End_Date DATE NOT NULL,
-  Status varchar(55) default 'pending', 
   Member_ID INT NOT NULL,
+  Start_Date DATE ,
+  Fees INT ,
+  End_Date DATE ,
+  Status varchar(55) default 'pending', 
   FOREIGN KEY (Member_ID) REFERENCES Members(ID)
 );
 
 CREATE TABLE Teams
 (
+  ID INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
   Training_Time DATE NOT NULL,
   Size INT DEFAULT 0 NOT NULL,
-  ID INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
-  Level INT NOT NULL,
+  Level INT ,
 );
 
 CREATE TABLE Matches
@@ -179,6 +179,7 @@ alter table Employee add foreign key (DNO) references Department(Number)
 alter table Events add Status varchar(20) default 'pending';
 
 alter table Members add End_Date DATE;
+
 ---------------Inserting values into tables----------------
 insert into Accounts(Username,Password,Type)
 values
