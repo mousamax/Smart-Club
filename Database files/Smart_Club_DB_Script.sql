@@ -178,6 +178,7 @@ alter table Employee add foreign key (DNO) references Department(Number)
 
 alter table Events add Status varchar(20) default 'pending';
 
+alter table Members add End_Date DATE;
 ---------------Inserting values into tables----------------
 insert into Accounts(Username,Password,Type)
 values
