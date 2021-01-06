@@ -17,10 +17,11 @@ CREATE TABLE Members
   ID INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
   Fname VARCHAR(50) NOT NULL,
   Lname VARCHAR(50) NOT NULL,
-  Start_Date DATE NOT NULL,
   Age INT ,
   Sex char ,
   Status VARCHAR(20) default 'pending',
+  Start_Date DATE NOT NULL,
+  End_Date DATE NOT NULL,
   MemberShip_Price INT ,
   Username VARCHAR(50) ,
   FOREIGN KEY (Username) REFERENCES Accounts(Username)
@@ -179,7 +180,7 @@ alter table Employee add foreign key (DNO) references Department(Number)
 
 alter table Events add Status varchar(20) default 'pending';
 
-alter table Members add End_Date DATE;
+
 
 ---------------Inserting values into tables----------------
 insert into Accounts(Username,Password,Type)
@@ -207,7 +208,3 @@ values
 ('Training',2,888665555,'2020-06-19',null),
 ('Administration',1,987654321,'2020-01-01',null),
 ('Services',3,333445555,'2020-05-22',null)
-
-insert into Member 
-values (null,'Ahmed','Ehab',20,'M','active','2020-12-12',12500,'ahmedehabb.8')
-      (null,'Youssef','Qadry',20,'M','pending','2021-1-12',253621,'YoussefQadry12')
