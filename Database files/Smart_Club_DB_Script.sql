@@ -15,13 +15,14 @@ CREATE TABLE Accounts
 CREATE TABLE Members
 (
   ID INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
+  Fname VARCHAR(50) NOT NULL,
+  Lname VARCHAR(50) NOT NULL,
   Start_Date DATE NOT NULL,
-  Sex char ,
   Age INT ,
-  Name VARCHAR(50) NOT NULL,
+  Sex char ,
+  Status VARCHAR(20) default 'pending',
   MemberShip_Price INT ,
   Username VARCHAR(50) ,
-  Status VARCHAR(20) default 'pending',
   FOREIGN KEY (Username) REFERENCES Accounts(Username)
 );
 
@@ -206,3 +207,7 @@ values
 ('Training',2,888665555,'2020-06-19',null),
 ('Administration',1,987654321,'2020-01-01',null),
 ('Services',3,333445555,'2020-05-22',null)
+
+insert into Member 
+values (null,'Ahmed','Ehab',20,'M','active','2020-12-12',12500,'ahmedehabb.8')
+      (null,'Youssef','Qadry',20,'M','pending','2021-1-12',253621,'YoussefQadry12')
