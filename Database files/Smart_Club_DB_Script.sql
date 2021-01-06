@@ -20,7 +20,7 @@ CREATE TABLE Members
   Age INT ,
   Name VARCHAR(50) NOT NULL,
   ID INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
-  MemberShip_Price INT NOT NULL,
+  MemberShip_Price INT ,
   Username VARCHAR(50) NOT NULL,
   FOREIGN KEY (Username) REFERENCES Accounts(Username)
 );
