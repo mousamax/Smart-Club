@@ -16,12 +16,12 @@ CREATE TABLE Members
 (
   Start_Date DATE NOT NULL,
   Sex char ,
-  Status VARCHAR(20) NOT NULL,
+  Status VARCHAR(20) default 'pending',
   Age INT ,
   Name VARCHAR(50) NOT NULL,
   ID INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
   MemberShip_Price INT ,
-  Username VARCHAR(50) NOT NULL,
+  Username VARCHAR(50) ,
   FOREIGN KEY (Username) REFERENCES Accounts(Username)
 );
 
