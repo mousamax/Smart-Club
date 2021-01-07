@@ -35,5 +35,33 @@ namespace GUIPROJECT
             return returnData;
         }
 
+
+
+         public static Object IsValidYear(String yy, StringBuilder err)
+        {
+            Object returnData = null;
+            try
+            {
+                int y = Convert.ToInt32(yy);
+                if (y > 2020 || y < 1900)
+                {
+                    err.Append("Input " + y + " is out of boundaries");
+                }
+                else
+                {
+                    returnData = y;
+                }
+            }
+            catch
+            {
+                err.Append("Input " + yy+ " is not a valid year");
+            }
+            return returnData;
+        }
+
+       
     }
+
 }
+
+

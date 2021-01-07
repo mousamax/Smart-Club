@@ -90,7 +90,7 @@ namespace GUIPROJECT
         private void button7_Click(object sender, EventArgs e)
         {
             //code showing form or whatever
-
+            openChildForm(new EnrollinActivity());
             hideSubMenu();
         }
 

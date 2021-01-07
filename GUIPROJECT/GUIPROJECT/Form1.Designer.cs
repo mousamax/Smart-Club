@@ -93,7 +93,7 @@
             this.Exit.Location = new System.Drawing.Point(0, 715);
             this.Exit.Name = "Exit";
             this.Exit.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.Exit.Size = new System.Drawing.Size(220, 45);
+            this.Exit.Size = new System.Drawing.Size(224, 45);
             this.Exit.TabIndex = 11;
             this.Exit.Text = "Exit";
             this.Exit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -109,7 +109,7 @@
             this.Help.Location = new System.Drawing.Point(0, 670);
             this.Help.Name = "Help";
             this.Help.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.Help.Size = new System.Drawing.Size(220, 45);
+            this.Help.Size = new System.Drawing.Size(224, 45);
             this.Help.TabIndex = 10;
             this.Help.Text = "Help";
             this.Help.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -125,7 +125,7 @@
             this.Signup.Location = new System.Drawing.Point(0, 625);
             this.Signup.Name = "Signup";
             this.Signup.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.Signup.Size = new System.Drawing.Size(220, 45);
+            this.Signup.Size = new System.Drawing.Size(224, 45);
             this.Signup.TabIndex = 9;
             this.Signup.Text = "Signup";
             this.Signup.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -141,7 +141,7 @@
             this.Login.Location = new System.Drawing.Point(0, 580);
             this.Login.Name = "Login";
             this.Login.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.Login.Size = new System.Drawing.Size(220, 45);
+            this.Login.Size = new System.Drawing.Size(224, 45);
             this.Login.TabIndex = 7;
             this.Login.Text = "Login ";
             this.Login.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -157,7 +157,7 @@
             this.ThirdPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.ThirdPanel.Location = new System.Drawing.Point(0, 462);
             this.ThirdPanel.Name = "ThirdPanel";
-            this.ThirdPanel.Size = new System.Drawing.Size(220, 118);
+            this.ThirdPanel.Size = new System.Drawing.Size(224, 118);
             this.ThirdPanel.TabIndex = 6;
             // 
             // button9
@@ -169,7 +169,7 @@
             this.button9.Location = new System.Drawing.Point(0, 80);
             this.button9.Name = "button9";
             this.button9.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button9.Size = new System.Drawing.Size(220, 35);
+            this.button9.Size = new System.Drawing.Size(224, 35);
             this.button9.TabIndex = 2;
             this.button9.Text = "button9";
             this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -185,7 +185,7 @@
             this.button10.Location = new System.Drawing.Point(0, 40);
             this.button10.Name = "button10";
             this.button10.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button10.Size = new System.Drawing.Size(220, 40);
+            this.button10.Size = new System.Drawing.Size(224, 40);
             this.button10.TabIndex = 1;
             this.button10.Text = "button10";
             this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -201,7 +201,7 @@
             this.button11.Location = new System.Drawing.Point(0, 0);
             this.button11.Name = "button11";
             this.button11.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button11.Size = new System.Drawing.Size(220, 40);
+            this.button11.Size = new System.Drawing.Size(224, 40);
             this.button11.TabIndex = 0;
             this.button11.Text = "button11";
             this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -218,7 +218,7 @@
             this.ThirdSubButton.Location = new System.Drawing.Point(0, 417);
             this.ThirdSubButton.Name = "ThirdSubButton";
             this.ThirdSubButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.ThirdSubButton.Size = new System.Drawing.Size(220, 45);
+            this.ThirdSubButton.Size = new System.Drawing.Size(224, 45);
             this.ThirdSubButton.TabIndex = 5;
             this.ThirdSubButton.Text = "Third";
             this.ThirdSubButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -234,7 +234,7 @@
             this.SecondPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.SecondPanel.Location = new System.Drawing.Point(0, 299);
             this.SecondPanel.Name = "SecondPanel";
-            this.SecondPanel.Size = new System.Drawing.Size(220, 118);
+            this.SecondPanel.Size = new System.Drawing.Size(224, 118);
             this.SecondPanel.TabIndex = 4;
             // 
             // button5
@@ -246,7 +246,7 @@
             this.button5.Location = new System.Drawing.Point(0, 80);
             this.button5.Name = "button5";
             this.button5.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button5.Size = new System.Drawing.Size(220, 35);
+            this.button5.Size = new System.Drawing.Size(224, 35);
             this.button5.TabIndex = 2;
             this.button5.Text = "button5";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -262,7 +262,7 @@
             this.button6.Location = new System.Drawing.Point(0, 40);
             this.button6.Name = "button6";
             this.button6.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button6.Size = new System.Drawing.Size(220, 40);
+            this.button6.Size = new System.Drawing.Size(224, 40);
             this.button6.TabIndex = 1;
             this.button6.Text = "button6";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -278,9 +278,9 @@
             this.button7.Location = new System.Drawing.Point(0, 0);
             this.button7.Name = "button7";
             this.button7.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button7.Size = new System.Drawing.Size(220, 40);
+            this.button7.Size = new System.Drawing.Size(224, 40);
             this.button7.TabIndex = 0;
-            this.button7.Text = "button7";
+            this.button7.Text = "Enroll in Activity";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
@@ -295,7 +295,7 @@
             this.SecondSubButton.Location = new System.Drawing.Point(0, 254);
             this.SecondSubButton.Name = "SecondSubButton";
             this.SecondSubButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.SecondSubButton.Size = new System.Drawing.Size(220, 45);
+            this.SecondSubButton.Size = new System.Drawing.Size(224, 45);
             this.SecondSubButton.TabIndex = 3;
             this.SecondSubButton.Text = "Second";
             this.SecondSubButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -311,7 +311,7 @@
             this.FirstPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.FirstPanel.Location = new System.Drawing.Point(0, 136);
             this.FirstPanel.Name = "FirstPanel";
-            this.FirstPanel.Size = new System.Drawing.Size(220, 118);
+            this.FirstPanel.Size = new System.Drawing.Size(224, 118);
             this.FirstPanel.TabIndex = 2;
             // 
             // parkingsubscribe
@@ -323,7 +323,7 @@
             this.parkingsubscribe.Location = new System.Drawing.Point(0, 80);
             this.parkingsubscribe.Name = "parkingsubscribe";
             this.parkingsubscribe.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.parkingsubscribe.Size = new System.Drawing.Size(220, 35);
+            this.parkingsubscribe.Size = new System.Drawing.Size(224, 35);
             this.parkingsubscribe.TabIndex = 2;
             this.parkingsubscribe.Text = "Parking Subscribtion";
             this.parkingsubscribe.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -339,7 +339,7 @@
             this.addevent.Location = new System.Drawing.Point(0, 40);
             this.addevent.Name = "addevent";
             this.addevent.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.addevent.Size = new System.Drawing.Size(220, 40);
+            this.addevent.Size = new System.Drawing.Size(224, 40);
             this.addevent.TabIndex = 1;
             this.addevent.Text = "Add Event";
             this.addevent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -355,7 +355,7 @@
             this.button2.Location = new System.Drawing.Point(0, 0);
             this.button2.Name = "button2";
             this.button2.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(220, 40);
+            this.button2.Size = new System.Drawing.Size(224, 40);
             this.button2.TabIndex = 0;
             this.button2.Text = "button2";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -372,7 +372,7 @@
             this.FirstSubmenubutton.Location = new System.Drawing.Point(0, 91);
             this.FirstSubmenubutton.Name = "FirstSubmenubutton";
             this.FirstSubmenubutton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.FirstSubmenubutton.Size = new System.Drawing.Size(220, 45);
+            this.FirstSubmenubutton.Size = new System.Drawing.Size(224, 45);
             this.FirstSubmenubutton.TabIndex = 1;
             this.FirstSubmenubutton.Text = "First";
             this.FirstSubmenubutton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -385,7 +385,7 @@
             this.panelLOGO.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLOGO.Location = new System.Drawing.Point(0, 0);
             this.panelLOGO.Name = "panelLOGO";
-            this.panelLOGO.Size = new System.Drawing.Size(220, 91);
+            this.panelLOGO.Size = new System.Drawing.Size(224, 91);
             this.panelLOGO.TabIndex = 0;
             // 
             // pictureBox2
@@ -421,7 +421,7 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 610);
             this.Controls.Add(this.panelchildform);
