@@ -172,13 +172,51 @@ CREATE TABLE Team_Activity
   SSN INT NOT NULL,
   Activity_ID INT NOT NULL,
   PRIMARY KEY (Team_ID, SSN, Activity_ID),
-  FOREIGN KEY (Team_ID) REFERENCES Teams(ID),
-  FOREIGN KEY (SSN) REFERENCES Employee(SSN),
-  FOREIGN KEY (Activity_ID) REFERENCES Activites(ID)
 );
+
+ALTER TABLE [dbo].[Team_Activity]  WITH CHECK ADD FOREIGN KEY([Team_ID])
+REFERENCES [dbo].[Teams] ([ID])
+GO
+ALTER TABLE [dbo].[Team_Activity]  WITH CHECK ADD  CONSTRAINT [FK__Team_Activi__SSN_Activity] FOREIGN KEY([SSN], [Activity_ID])
+REFERENCES [dbo].[Coaches] ([SSN], [Activity_ID])
+GO
+ALTER TABLE [dbo].[Team_Activity] CHECK CONSTRAINT [FK__Team_Activi__SSN_Activity]
+GO
+
 alter table Employee add foreign key (DNO) references Department(Number)
 
 alter table Events add Status varchar(20) default 'pending';
+
+
+/****** Object:  Table [dbo].[Members_Teams]    Script Date: 1/7/2021 11:29:12 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Members_Teams](
+	[Member_ID] [int] NOT NULL,
+	[Team_ID] [int] NOT NULL,
+ CONSTRAINT [PK_Members_Teams] PRIMARY KEY CLUSTERED 
+(
+	[Member_ID] ASC,
+	[Team_ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+
+ALTER TABLE [dbo].[Members_Teams]  WITH CHECK ADD  CONSTRAINT [FK_Members_Teams_Members] FOREIGN KEY([Member_ID])
+REFERENCES [dbo].[Members] ([ID])
+GO
+ALTER TABLE [dbo].[Members_Teams] CHECK CONSTRAINT [FK_Members_Teams_Members]
+GO
+ALTER TABLE [dbo].[Members_Teams]  WITH CHECK ADD  CONSTRAINT [FK_Members_Teams_Teams] FOREIGN KEY([Team_ID])
+REFERENCES [dbo].[Teams] ([ID])
+GO
+ALTER TABLE [dbo].[Members_Teams] CHECK CONSTRAINT [FK_Members_Teams_Teams]
+GO
+
 
 ---------------Inserting values into tables----------------
 insert into Accounts(Username,Password,Type)
