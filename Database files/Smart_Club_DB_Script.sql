@@ -20,8 +20,8 @@ CREATE TABLE Members
   Age INT ,
   Sex char ,
   Status VARCHAR(20) default 'pending',
-  Start_Date DATE NOT NULL,
-  End_Date DATE NOT NULL,
+  Start_Date DATE ,
+  End_Date DATE ,
   MemberShip_Price INT ,
   Username VARCHAR(50) ,
   FOREIGN KEY (Username) REFERENCES Accounts(Username)
@@ -32,8 +32,8 @@ CREATE TABLE Events
   Event_id INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
   Name VARCHAR (55) NOT NULL,
   Place VARCHAR (70),
-  Date DATE NOT NULL,
-  Likes INT DEFAULT 0 NOT NULL,
+  Date DATE ,
+  Likes INT DEFAULT 0,
   Fees INT NOT NULL,
   Member_ID INT NOT NULL,
   FOREIGN KEY (Member_ID) REFERENCES Members(ID)
@@ -180,8 +180,6 @@ alter table Employee add foreign key (DNO) references Department(Number)
 
 alter table Events add Status varchar(20) default 'pending';
 
-
-
 ---------------Inserting values into tables----------------
 insert into Accounts(Username,Password,Type)
 values
@@ -208,3 +206,10 @@ values
 ('Training',2,888665555,'2020-06-19',null),
 ('Administration',1,987654321,'2020-01-01',null),
 ('Services',3,333445555,'2020-05-22',null)
+
+insert into Members(Fname,Lname,Age,Sex,Start_Date,End_Date,MemberShip_Price,Status,Username)
+Values
+('Mousa','Mohammed',20,'M',null,null,null,'pending',null),
+('Mostafa','Usama',20,'M',null,null,null,'pending',null),
+('Ahmed','Ehab',20,'M',null,null,null,'pending',null),
+('Yousef','Qadry',20,'M',null,null,null,'pending',null)
