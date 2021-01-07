@@ -1,0 +1,24 @@
+E:\3rd Semester CCE\Introduction to Database management system\Project\CODE\Gui\GUIPROJECT\GUIPROJECT\bin\Debug\GUIPROJECT.exe.config
+E:\3rd Semester CCE\Introduction to Database management system\Project\CODE\Gui\GUIPROJECT\GUIPROJECT\bin\Debug\GUIPROJECT.exe
+E:\3rd Semester CCE\Introduction to Database management system\Project\CODE\Gui\GUIPROJECT\GUIPROJECT\bin\Debug\GUIPROJECT.pdb
+E:\3rd Semester CCE\Introduction to Database management system\Project\CODE\Gui\GUIPROJECT\GUIPROJECT\obj\Debug\GUIPROJECT.csprojResolveAssemblyReference.cache
+E:\3rd Semester CCE\Introduction to Database management system\Project\CODE\Gui\GUIPROJECT\GUIPROJECT\obj\Debug\GUIPROJECT.Form1.resources
+E:\3rd Semester CCE\Introduction to Database management system\Project\CODE\Gui\GUIPROJECT\GUIPROJECT\obj\Debug\GUIPROJECT.Properties.Resources.resources
+E:\3rd Semester CCE\Introduction to Database management system\Project\CODE\Gui\GUIPROJECT\GUIPROJECT\obj\Debug\GUIPROJECT.csproj.GenerateResource.Cache
+E:\3rd Semester CCE\Introduction to Database management system\Project\CODE\Gui\GUIPROJECT\GUIPROJECT\obj\Debug\GUIPROJECT.exe
+E:\3rd Semester CCE\Introduction to Database management system\Project\CODE\Gui\GUIPROJECT\GUIPROJECT\obj\Debug\GUIPROJECT.pdb
+E:\3rd Semester CCE\Introduction to Database management system\Project\CODE\Gui\GUIPROJECT\GUIPROJECT\obj\Debug\GUIPROJECT.testform.resources
+E:\3rd Semester CCE\Introduction to Database management system\Project\CODE\Gui\GUIPROJECT\GUIPROJECT\obj\Debug\GUIPROJECT.LOGIN.resources
+D:\Mousa\CCE\Database Management Systems\Project\Ahmed Ehab\Gui\GUIPROJECT\GUIPROJECT\bin\Debug\GUIPROJECT.exe.config
+D:\Mousa\CCE\Database Management Systems\Project\Ahmed Ehab\Gui\GUIPROJECT\GUIPROJECT\bin\Debug\GUIPROJECT.exe
+D:\Mousa\CCE\Database Management Systems\Project\Ahmed Ehab\Gui\GUIPROJECT\GUIPROJECT\bin\Debug\GUIPROJECT.pdb
+D:\Mousa\CCE\Database Management Systems\Project\Ahmed Ehab\Gui\GUIPROJECT\GUIPROJECT\obj\Debug\GUIPROJECT.csprojAssemblyReference.cache
+D:\Mousa\CCE\Database Management Systems\Project\Ahmed Ehab\Gui\GUIPROJECT\GUIPROJECT\obj\Debug\GUIPROJECT.LOGIN.resources
+D:\Mousa\CCE\Database Management Systems\Project\Ahmed Ehab\Gui\GUIPROJECT\GUIPROJECT\obj\Debug\GUIPROJECT.Properties.Resources.resources
+D:\Mousa\CCE\Database Management Systems\Project\Ahmed Ehab\Gui\GUIPROJECT\GUIPROJECT\obj\Debug\GUIPROJECT.csproj.GenerateResource.cache
+D:\Mousa\CCE\Database Management Systems\Project\Ahmed Ehab\Gui\GUIPROJECT\GUIPROJECT\obj\Debug\GUIPROJECT.csproj.CoreCompileInputs.cache
+D:\Mousa\CCE\Database Management Systems\Project\Ahmed Ehab\Gui\GUIPROJECT\GUIPROJECT\obj\Debug\GUIPROJECT.exe
+D:\Mousa\CCE\Database Management Systems\Project\Ahmed Ehab\Gui\GUIPROJECT\GUIPROJECT\obj\Debug\GUIPROJECT.pdb
+D:\Mousa\CCE\Database Management Systems\Project\Ahmed Ehab\Gui\GUIPROJECT\GUIPROJECT\obj\Debug\GUIPROJECT.Employee.resources
+D:\Mousa\CCE\Database Management Systems\Project\Ahmed Ehab\Gui\GUIPROJECT\GUIPROJECT\obj\Debug\GUIPROJECT.Requests.resources
+D:\Mousa\CCE\Database Management Systems\Project\Ahmed Ehab\Gui\GUIPROJECT\GUIPROJECT\obj\Debug\GUIPROJECT.Dashboard.resources
