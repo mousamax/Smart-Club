@@ -103,7 +103,7 @@ namespace GUIPROJECT
         private void Teamlist_Click(object sender, EventArgs e)
         {
             //code showing form or whatever
-            openChildForm(new showActivitylist());
+            openChildForm(new ReviewActivities());
             hideSubMenu();
         }
         #endregion
@@ -136,14 +136,14 @@ namespace GUIPROJECT
         private void button9_Click(object sender, EventArgs e)
         {
             //code showing form or whatever
-
+            openChildForm(new EnrollGuestinActivity());
             hideSubMenu();
         }
 
         #endregion
 
         private new Form ActiveForm = null;
-        private void openChildForm(Form ChildForm)
+        public void openChildForm(Form ChildForm)
         {
             if (ActiveForm != null)
                 ActiveForm.Close();
@@ -168,6 +168,19 @@ namespace GUIPROJECT
         {
             LOGIN x = new LOGIN();
             openChildForm(x);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Activities_Reviews x = new Activities_Reviews(this);
+            openChildForm(x);
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            //code showing form or whatever
+            openChildForm(new showActivitylist());
+            hideSubMenu();
         }   
 
 

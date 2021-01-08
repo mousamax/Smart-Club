@@ -40,6 +40,8 @@
             this.turntomember = new System.Windows.Forms.Button();
             this.ThirdSubButton = new System.Windows.Forms.Button();
             this.SecondPanel = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.ReviewActivities = new System.Windows.Forms.Button();
             this.Teamlist = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
@@ -90,10 +92,10 @@
             this.Exit.FlatAppearance.BorderSize = 0;
             this.Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Exit.ForeColor = System.Drawing.Color.Gainsboro;
-            this.Exit.Location = new System.Drawing.Point(0, 715);
+            this.Exit.Location = new System.Drawing.Point(0, 787);
             this.Exit.Name = "Exit";
             this.Exit.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.Exit.Size = new System.Drawing.Size(220, 45);
+            this.Exit.Size = new System.Drawing.Size(224, 45);
             this.Exit.TabIndex = 11;
             this.Exit.Text = "Exit";
             this.Exit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -106,10 +108,10 @@
             this.Help.FlatAppearance.BorderSize = 0;
             this.Help.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Help.ForeColor = System.Drawing.Color.Gainsboro;
-            this.Help.Location = new System.Drawing.Point(0, 670);
+            this.Help.Location = new System.Drawing.Point(0, 742);
             this.Help.Name = "Help";
             this.Help.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.Help.Size = new System.Drawing.Size(220, 45);
+            this.Help.Size = new System.Drawing.Size(224, 45);
             this.Help.TabIndex = 10;
             this.Help.Text = "Help";
             this.Help.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -122,10 +124,10 @@
             this.Signup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Signup.ForeColor = System.Drawing.Color.Gainsboro;
             this.Signup.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Signup.Location = new System.Drawing.Point(0, 625);
+            this.Signup.Location = new System.Drawing.Point(0, 697);
             this.Signup.Name = "Signup";
             this.Signup.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.Signup.Size = new System.Drawing.Size(220, 45);
+            this.Signup.Size = new System.Drawing.Size(224, 45);
             this.Signup.TabIndex = 9;
             this.Signup.Text = "Signup";
             this.Signup.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -138,10 +140,10 @@
             this.Login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Login.ForeColor = System.Drawing.Color.Gainsboro;
             this.Login.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Login.Location = new System.Drawing.Point(0, 580);
+            this.Login.Location = new System.Drawing.Point(0, 652);
             this.Login.Name = "Login";
             this.Login.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.Login.Size = new System.Drawing.Size(220, 45);
+            this.Login.Size = new System.Drawing.Size(224, 45);
             this.Login.TabIndex = 7;
             this.Login.Text = "Login ";
             this.Login.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -155,9 +157,9 @@
             this.ThirdPanel.Controls.Add(this.button10);
             this.ThirdPanel.Controls.Add(this.turntomember);
             this.ThirdPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ThirdPanel.Location = new System.Drawing.Point(0, 462);
+            this.ThirdPanel.Location = new System.Drawing.Point(0, 534);
             this.ThirdPanel.Name = "ThirdPanel";
-            this.ThirdPanel.Size = new System.Drawing.Size(220, 118);
+            this.ThirdPanel.Size = new System.Drawing.Size(224, 118);
             this.ThirdPanel.TabIndex = 6;
             // 
             // button9
@@ -169,9 +171,9 @@
             this.button9.Location = new System.Drawing.Point(0, 80);
             this.button9.Name = "button9";
             this.button9.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button9.Size = new System.Drawing.Size(220, 35);
+            this.button9.Size = new System.Drawing.Size(224, 35);
             this.button9.TabIndex = 2;
-            this.button9.Text = "button9";
+            this.button9.Text = "Enroll in Activity";
             this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.button9_Click);
@@ -185,7 +187,7 @@
             this.button10.Location = new System.Drawing.Point(0, 40);
             this.button10.Name = "button10";
             this.button10.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button10.Size = new System.Drawing.Size(220, 40);
+            this.button10.Size = new System.Drawing.Size(224, 40);
             this.button10.TabIndex = 1;
             this.button10.Text = "View Members Reviews";
             this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -201,7 +203,7 @@
             this.turntomember.Location = new System.Drawing.Point(0, 0);
             this.turntomember.Name = "turntomember";
             this.turntomember.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.turntomember.Size = new System.Drawing.Size(220, 40);
+            this.turntomember.Size = new System.Drawing.Size(224, 40);
             this.turntomember.TabIndex = 0;
             this.turntomember.Text = "Turn To Member";
             this.turntomember.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -215,10 +217,10 @@
             this.ThirdSubButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ThirdSubButton.ForeColor = System.Drawing.Color.Gainsboro;
             this.ThirdSubButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ThirdSubButton.Location = new System.Drawing.Point(0, 417);
+            this.ThirdSubButton.Location = new System.Drawing.Point(0, 489);
             this.ThirdSubButton.Name = "ThirdSubButton";
             this.ThirdSubButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.ThirdSubButton.Size = new System.Drawing.Size(220, 45);
+            this.ThirdSubButton.Size = new System.Drawing.Size(224, 45);
             this.ThirdSubButton.TabIndex = 5;
             this.ThirdSubButton.Text = "Guest";
             this.ThirdSubButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -228,14 +230,48 @@
             // SecondPanel
             // 
             this.SecondPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.SecondPanel.Controls.Add(this.button1);
+            this.SecondPanel.Controls.Add(this.ReviewActivities);
             this.SecondPanel.Controls.Add(this.Teamlist);
             this.SecondPanel.Controls.Add(this.button6);
             this.SecondPanel.Controls.Add(this.button7);
             this.SecondPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.SecondPanel.Location = new System.Drawing.Point(0, 299);
             this.SecondPanel.Name = "SecondPanel";
-            this.SecondPanel.Size = new System.Drawing.Size(220, 118);
+            this.SecondPanel.Size = new System.Drawing.Size(224, 190);
             this.SecondPanel.TabIndex = 4;
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.LightGray;
+            this.button1.Location = new System.Drawing.Point(0, 150);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(224, 35);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Team List";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // ReviewActivities
+            // 
+            this.ReviewActivities.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ReviewActivities.FlatAppearance.BorderSize = 0;
+            this.ReviewActivities.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ReviewActivities.ForeColor = System.Drawing.Color.LightGray;
+            this.ReviewActivities.Location = new System.Drawing.Point(0, 115);
+            this.ReviewActivities.Name = "ReviewActivities";
+            this.ReviewActivities.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.ReviewActivities.Size = new System.Drawing.Size(224, 35);
+            this.ReviewActivities.TabIndex = 3;
+            this.ReviewActivities.Text = "Activities\' Reviews ";
+            this.ReviewActivities.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ReviewActivities.UseVisualStyleBackColor = true;
+            this.ReviewActivities.Click += new System.EventHandler(this.button1_Click);
             // 
             // Teamlist
             // 
@@ -246,9 +282,9 @@
             this.Teamlist.Location = new System.Drawing.Point(0, 80);
             this.Teamlist.Name = "Teamlist";
             this.Teamlist.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.Teamlist.Size = new System.Drawing.Size(220, 35);
+            this.Teamlist.Size = new System.Drawing.Size(224, 35);
             this.Teamlist.TabIndex = 2;
-            this.Teamlist.Text = "Team list";
+            this.Teamlist.Text = "Review an Activity";
             this.Teamlist.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Teamlist.UseVisualStyleBackColor = true;
             this.Teamlist.Click += new System.EventHandler(this.Teamlist_Click);
@@ -262,7 +298,7 @@
             this.button6.Location = new System.Drawing.Point(0, 40);
             this.button6.Name = "button6";
             this.button6.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button6.Size = new System.Drawing.Size(220, 40);
+            this.button6.Size = new System.Drawing.Size(224, 40);
             this.button6.TabIndex = 1;
             this.button6.Text = "Manage my activities";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -278,7 +314,7 @@
             this.button7.Location = new System.Drawing.Point(0, 0);
             this.button7.Name = "button7";
             this.button7.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button7.Size = new System.Drawing.Size(220, 40);
+            this.button7.Size = new System.Drawing.Size(224, 40);
             this.button7.TabIndex = 0;
             this.button7.Text = "Enroll in Activity";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -295,7 +331,7 @@
             this.SecondSubButton.Location = new System.Drawing.Point(0, 254);
             this.SecondSubButton.Name = "SecondSubButton";
             this.SecondSubButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.SecondSubButton.Size = new System.Drawing.Size(220, 45);
+            this.SecondSubButton.Size = new System.Drawing.Size(224, 45);
             this.SecondSubButton.TabIndex = 3;
             this.SecondSubButton.Text = "Second";
             this.SecondSubButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -311,7 +347,7 @@
             this.FirstPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.FirstPanel.Location = new System.Drawing.Point(0, 136);
             this.FirstPanel.Name = "FirstPanel";
-            this.FirstPanel.Size = new System.Drawing.Size(220, 118);
+            this.FirstPanel.Size = new System.Drawing.Size(224, 118);
             this.FirstPanel.TabIndex = 2;
             // 
             // parkingsubscribe
@@ -323,7 +359,7 @@
             this.parkingsubscribe.Location = new System.Drawing.Point(0, 85);
             this.parkingsubscribe.Name = "parkingsubscribe";
             this.parkingsubscribe.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.parkingsubscribe.Size = new System.Drawing.Size(220, 33);
+            this.parkingsubscribe.Size = new System.Drawing.Size(224, 33);
             this.parkingsubscribe.TabIndex = 2;
             this.parkingsubscribe.Text = "Parking Subscribtion";
             this.parkingsubscribe.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -339,7 +375,7 @@
             this.addevent.Location = new System.Drawing.Point(0, 51);
             this.addevent.Name = "addevent";
             this.addevent.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.addevent.Size = new System.Drawing.Size(220, 34);
+            this.addevent.Size = new System.Drawing.Size(224, 34);
             this.addevent.TabIndex = 1;
             this.addevent.Text = "Add Event";
             this.addevent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -355,7 +391,7 @@
             this.UorTMember.Location = new System.Drawing.Point(0, 0);
             this.UorTMember.Name = "UorTMember";
             this.UorTMember.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.UorTMember.Size = new System.Drawing.Size(220, 51);
+            this.UorTMember.Size = new System.Drawing.Size(224, 51);
             this.UorTMember.TabIndex = 0;
             this.UorTMember.Text = "Update/Terminate Membership";
             this.UorTMember.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -372,7 +408,7 @@
             this.FirstSubmenubutton.Location = new System.Drawing.Point(0, 91);
             this.FirstSubmenubutton.Name = "FirstSubmenubutton";
             this.FirstSubmenubutton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.FirstSubmenubutton.Size = new System.Drawing.Size(220, 45);
+            this.FirstSubmenubutton.Size = new System.Drawing.Size(224, 45);
             this.FirstSubmenubutton.TabIndex = 1;
             this.FirstSubmenubutton.Text = "First";
             this.FirstSubmenubutton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -385,7 +421,7 @@
             this.panelLOGO.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLOGO.Location = new System.Drawing.Point(0, 0);
             this.panelLOGO.Name = "panelLOGO";
-            this.panelLOGO.Size = new System.Drawing.Size(220, 91);
+            this.panelLOGO.Size = new System.Drawing.Size(224, 91);
             this.panelLOGO.TabIndex = 0;
             // 
             // pictureBox2
@@ -421,7 +457,7 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 610);
             this.Controls.Add(this.panelchildform);
@@ -460,8 +496,6 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button SecondSubButton;
-        private System.Windows.Forms.Button Signup;
-        private System.Windows.Forms.Button Login;
         private System.Windows.Forms.Panel ThirdPanel;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
@@ -472,6 +506,10 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button Exit;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button Signup;
+        private System.Windows.Forms.Button Login;
+        private System.Windows.Forms.Button ReviewActivities;
+        private System.Windows.Forms.Button button1;
 
     }
 }

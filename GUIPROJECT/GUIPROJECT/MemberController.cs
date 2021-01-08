@@ -94,6 +94,7 @@ namespace GUIPROJECT
             return dbMan.ExecuteNonQuery(query);
         }
 
+ 
         public int CreateNewTeamforaCertainActivity(string trainingtime)
         {
             // will initialize team level and size by 1
@@ -183,6 +184,120 @@ namespace GUIPROJECT
         {
             string query = "select Comment, Rating from Reviews; ";
             return dbMan.ExecuteReader(query);
+        }
+
+        //
+        // ahmed ehab new 
+
+        public string GetActivityidFromName(string actname)
+        {
+            string query = "select ID from Activites Where Name='" + actname + "' ;";
+            return ((int)dbMan.ExecuteReader(query).Rows[0][0]).ToString();
+        }
+
+        public DataTable GetTeamsOfaMemberInaCertainActivity(string memberid, string activityid)
+        {
+
+            string query = "select Members_teams.Team_ID" +
+            " from Members_teams join Team_Activity on Team_Activity.Team_ID=Members_teams.Team_ID" +
+            " where Member_ID=" + memberid + " and activity_id=" + activityid + ";";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public int DropMefromCertainTeam(string memberid, string teamid)
+        {
+            string query = "delete from Members_teams" +
+                            " where Member_ID=" + memberid + " and Team_ID=" + teamid + " ; ";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
+        public DataTable GetTrainingTimeofTeam(string teamid)
+        {
+            string query = "select Training_Time from teams where ID=" + teamid + " ; ";
+            return dbMan.ExecuteReader(query);
+        }
+
+
+        public int changeTrainingTimeofTeam(string teamid, string training_time)
+        {
+            string query = "UPDATE teams SET Training_Time='" + training_time +
+                           "' WHERE id=" + teamid + " ; ";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
+
+        public DataTable GetLevelofTeam(string teamid)
+        {
+            string query = "select level from teams where id=" + teamid + " ; ";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public int likeActivity(string actname)
+        {
+            string query = " Update Activites" +
+                            " Set likes = likes + 1" +
+                            " Where Name='" + actname + "' ; ";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
+
+        public DataTable GetReviewsOfCertainActivity(string actname)
+        {
+          string query ="select Reviews.*"+
+                       " from Reviews join Activites_Reviews on Activites_Reviews.Review_ID=Reviews.Review_ID join Activites on ID=Activites_Reviews.Activity_ID"
+                      + " where Activites.Name='" + actname + "' ; ";
+          return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable GetLikesOfActivity(string actname)
+        {
+            string query = "select likes from activites where name='" + actname + "' ; ";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public int insertaReview(string comment, int rating, string date)
+        {
+            string query = "insert into Reviews" +
+                          " values ('" + comment + "'," + rating + "," + date + ");";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
+        public string GetReviewID(string comment, int rating,string date)
+        {
+        string query="select Review_id"+
+                     " from Reviews "+
+                      " where comment like '"+comment+"' and rating="+rating+" and date="+date+" ;" ;
+        return ((int)dbMan.ExecuteReader(query).Rows[0][0]).ToString();
+        }
+
+        public int insertintoActivityReview(int reviewID, int ActId,int MemberID)
+        {
+            string query = "insert into Activites_Reviews" +
+                          " values (" + MemberID + "," + reviewID+ "," + ActId+ ");";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
+        public int GetTeamSize(string teamid)
+        {
+            string query = "select size from Teams where ID=" + Convert.ToInt32(teamid) + " ; ";
+            return ((int)dbMan.ExecuteReader(query).Rows[0][0]);
+        }
+
+        public int GetTeamActualSize(string teamid)
+        {
+            string query = "select count(*) from Members_Teams where Team_ID=" + Convert.ToInt32(teamid) + " ; ";
+            return ((int)dbMan.ExecuteReader(query).Rows[0][0]);
+        }
+
+        public int EnrollGuestinTeam(string guestid, string teamid)
+        {
+            string query = "Update Guest Set Team_ID =" + int.Parse(teamid) + " where SSN=" + int.Parse(guestid) + " ; ";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
+        public DataTable GetGuestTeam( string guestid){
+              string query = "Select Team_ID FROM GUEST WHERE SSN="+int.Parse(guestid)+";" ;
+              return dbMan.ExecuteReader(query);
         }
     }
 }

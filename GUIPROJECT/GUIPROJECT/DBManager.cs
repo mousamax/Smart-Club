@@ -11,7 +11,7 @@ namespace GUIPROJECT
     public class DBManager
     {
         //TODO: Make Sure to change Connection String to your Database 
-        static string DB_Connection_String = @"Data Source=DESKTOP-CMDUM1C\SQLEXPRESS;Initial Catalog=Smart_Club;Integrated Security=True";
+        static string DB_Connection_String = @"Data Source=.;Initial Catalog=Smart_Club;Integrated Security=True";
         SqlConnection myConnection;
 
         public DBManager()

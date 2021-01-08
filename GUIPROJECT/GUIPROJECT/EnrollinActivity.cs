@@ -77,7 +77,18 @@ namespace GUIPROJECT
                 MessageBox.Show("Invalid Action");
                 return;
             }
-            controllerobj.EnrollMemberinTeam(memberid, comboBox4.Text);
+            int actsize = controllerobj.GetTeamActualSize(comboBox4.Text);
+            int maxsize = controllerobj.GetTeamSize(comboBox4.Text);
+            if (actsize == maxsize)
+            {
+                MessageBox.Show("Team is full ");
+                return;
+            }
+           int x= controllerobj.EnrollMemberinTeam(memberid, comboBox4.Text);
+           if (x == 0)
+               MessageBox.Show("You're Already Enrolled");
+           else
+               MessageBox.Show("Successfully Enrolled");
         }
 
        
