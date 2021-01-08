@@ -251,3 +251,10 @@ Values
 ('Mostafa','Usama',20,'M',null,null,null,'pending',null),
 ('Ahmed','Ehab',20,'M',null,null,null,'pending',null),
 ('Yousef','Qadry',20,'M',null,null,null,'pending',null)
+
+select Event_id,Name,Place,Date,Fees,Status,Member_ID from Events where Status='pending';insert into Events(Name,Date,Fees,Member_ID,Place,Status)
+  values
+  ('Birthday','2021-01-15',150,1,'Cafe','pending'),
+  ('Khotoba','2021-01-16',150,2,'Hall1','pending'),
+  ('Birthday','2021-01-17',150,2,'Hall2','pending'),
+  ('Wedding','2021-01-20',150,3,'Pool','pending')
