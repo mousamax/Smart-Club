@@ -67,13 +67,13 @@ end
 go
 
 
-create procedure AddActivity @ID int,
+create procedure AddActivity 
 @Name varchar(50),
 @Place varchar(50)
 as
 begin
-Insert into Activites(ID,Name,Place)
-Values(@ID,@Name,@Place)
+Insert into Activites(Name,Place)
+Values(@Name,@Place)
 end 
 go
 
